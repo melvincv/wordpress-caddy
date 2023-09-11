@@ -1,8 +1,17 @@
 {
+    email melvincv@example.com
     acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
 }
+
 caddy.awsl.melvincv.com {
     root * /var/www/html
     php_fastcgi wordpress:9000
     file_server
+
+    @staticFiles {
+        path *.css *.js *.png *.jpg *.jpeg *.gif *.ico
+    }
+    header @staticFiles Cache-Control "public, max-age=31536000, immutable"
+
+    encode gzip
 }
