@@ -1,0 +1,8 @@
+{
+    acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
+}
+caddy.awsl.melvincv.com {
+    root * /var/www/html
+    php_fastcgi wordpress:9000
+    file_server
+}
