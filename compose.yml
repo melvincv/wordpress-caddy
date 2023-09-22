@@ -11,13 +11,12 @@ services:
       MYSQL_ROOT_PASSWORD:
       MYSQL_USER:
       MYSQL_PASSWORD:
-    command: '--default-authentication-plugin=mysql_native_password'
     networks:
       - wp
 
   # WordPress
   wordpress:
-    image: wordpress:php7.4-fpm-alpine
+    image: wordpress:6.3-fpm-alpine
     restart: unless-stopped
     environment:
       WORDPRESS_DB_HOST: db:3306
