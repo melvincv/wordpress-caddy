@@ -45,6 +45,9 @@ services:
       - ./Caddyfile:/etc/caddy/Caddyfile
     networks:
       - wp
+    depends_on:
+      - db
+      - wordpress
 
   adminer:
     image: adminer
