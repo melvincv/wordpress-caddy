@@ -6,7 +6,7 @@
 - 1 GB RAM (minimum)
 - Docker with Compose
 
-You may use my install script to create a new user and install Docker.
+You may use my [install script](bin/install.sh) to create a new user and install Docker.
 First change the values of the variables at the top:
 
 ```
@@ -36,13 +36,7 @@ and also replace `caddy.awsl.melvincv.com` with your domain.
 
 Review the settings, Save and Quit.
 
-- Create a `.env` file with the following variables:
-
-```
-MYSQL_ROOT_PASSWORD=
-MYSQL_USER=
-MYSQL_PASSWORD=
-```
+- Copy the `env.sh` file to `.env` and fill in your secrets.
 
 - Then run docker compose:
 

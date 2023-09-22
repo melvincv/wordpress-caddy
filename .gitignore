@@ -1,3 +1,4 @@
 .env
 caddy_*
 wordpress/
+www/
